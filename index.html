@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+  </style>
+</head>
+<body>
+  <div class="mode">
+    <img src="./images/night-mode.png" id="icon">
+  </div>
+  <header class="container">
+    <div class="logo">
+      <img class="main-logo" src="images/logo.svg" alt="Fylo">
+    </div>
+    
+    <ul class="head-menu">
+      <li class="item-1">
+        <a href="#features" class="link-1">Features</a>
+      </li>
+      <li class="item-2">
+        <a href="#Team" class="link-2">Team</a>
+      </li>
+      <li class="item-3">
+        <a href="#Sign-In" class="link-3">Sign In</a>
+      </li>
+    </ul>
+    
+    
+  </header>
+  <section class="main container">
+    <div class="left-1-container">
+      <h1 class="title-1">
+        All your files in one secure location, accessible anywhere.
+      </h1>
+      <p class="para-1">Fylo stores your most important files in one secure location. 
+        Access them wherever you need, share and collaborate with friends, 
+        family, and co-workers.
+      </p>
+
+      <div class="btn-1">
+        <div class="inp-err">
+          <input id="left-email" class="email-inp" type="email" placeholder="Enter your email..">
+          <div id="left-email-error" class="email-error-message"></div>
+        </div>
+        <button type="button" onclick="validateEmail('left-email')" class="get-started">Get Started</button>
+        
+      </div>
+    </div>
+
+    <div class="right-1-container">
+      <img class="img-1" src="images/illustration-1.svg" alt="">
+    </div>
+
+  </section>
+
+  <section class="about">
+    <img class="curve" src="images/bg-curve-desktop.svg" alt="">
+    <div class="one container" >
+      <div class="left-2-container">
+        <h1 class="left-2-h1">
+          Stay productive, wherever you are
+        </h1>
+        <div class="left-2-textcontainer">
+          <p class="p1" >
+            Never let location be an issue when accessing your files. Fylo has you
+            covered for all of your file storage needs.
+          </p>
+          <p class="p2">
+            Securely share files and folders with friends, family and colleagues for 
+  live collaboration. No email attachments required!
+          </p>
+          <a href="#" class="left-2-a">
+            See how Fylo works 
+            <img src="images/icon-arrow.svg" alt="">
+          </a>
+        </div>
+
+
+
+        <div class="review">
+          <img src="images/icon-quotes.svg" alt="">
+          <p>
+            Fylo has improved our team productivity by an order of magnitude. Since 
+  making the switch our team has become a well-oiled collaboration machine.
+          </p>
+          <div class="person">
+            <img src="images/avatar-testimonial.jpg" alt="">
+            <div class="name">
+              <h4>
+                Kyle Burton
+              </h4>
+              <p>
+                Founder & CEO, Huddle
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-right ">
+        <img class="img-2" src="images/illustration-2.svg">
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="support container">
+    <div class="support-container">
+      <div class="support-left">
+        <h2>
+          Get early access today
+        </h2>
+        <p>
+          It only takes a minute to sign up and our free starter tier is extremely generous. 
+    If you have any questions, our support team would be happy to help you.
+        </p>
+      </div>
+      <div class="support-right">
+        <div class="inp-err">
+        <input id="support-email" class="email-inp" type="email" placeholder="email@example.com">
+        <div id="support-email-error" class="email-error-message"></div>
+      </div>
+        <button class="get-started" onclick="validateSupportEmail()">Get Started For Free</button>
+      </div>
+      
+    
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer container" >
+    <div class="footer-container">
+      <div class="footer-top">
+        <img  src="images/logo.svg" alt="Fylo">
+      </div>
+    
+
+      <div class="footer-bot">
+        <ul class="footer-ul footer-link" >
+          <li>
+            <img src="images/icon-phone.svg" alt="">
+            <p>
+              Phone: +1-543-123-4567
+            </p>
+          </li>
+          <li> 
+            <img src="images/icon-email.svg" alt="">
+            <p>
+              example@fylo.com
+            </p>
+          </li>
+        </ul>
+      
+    
+        <div class="footer-link">
+          <a href="#">About Us</a>
+          <a href="#">Jobs</a>
+          <a href="#">Press</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-link">
+          <a href="#">Contact Us</a>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+        <ul class="media-icon">
+          <li><a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>  
+  <script>
+
+function validateEmail(inputId) {
+  var emailInput = document.getElementById(inputId);
+  var emailError = document.getElementById(inputId + "-error");
+  var emailValue = emailInput.value.trim(); 
+  
+  if (!emailValue || !isValidEmail(emailValue)) {
+    emailInput.classList.add("email-error"); 
+    emailError.innerText = "Please check your email"; 
+  } else {
+    emailInput.classList.remove("email-error"); 
+    emailError.innerText = ""; 
+  }
+}
+
+function isValidEmail(email) {
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+function validateSupportEmail() {
+  var emailInput = document.getElementById("support-email");
+  var emailError = document.getElementById("support-email-error");
+  var emailValue = emailInput.value.trim(); 
+  
+  if (!emailValue || !isValidEmail(emailValue)) {
+    emailInput.classList.add("email-error"); 
+    emailError.innerText = "Please check your email"; 
+  } else {
+    emailInput.classList.remove("email-error"); 
+    emailError.innerText = ""; 
+  }
+}
+  var icon=document.getElementById("icon");
+  icon.onclick=function()
+  {
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+      icon.src="./images/brightness.png";
+    }
+    else{
+      icon.src="./images/night-mode.png";
+    }
+  }
+  </script>
+  
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Suhaina Fathima M</a>.
+    </p>
+  </footer> -->
+</body>
+</html>
