@@ -16,6 +16,7 @@
     --footahov:#455094;
     --color3:#585989;
     --rev:rgba(191,191,191,0.4);
+    --color4:#3a3944;
     
 }
 .dark-theme{
@@ -109,7 +110,10 @@ button{
     right: 20px;
     z-index: 999; 
 }
-
+input[type="email"]
+{
+    font: black;
+}
 
 button:hover{
     opacity: 0.7;
@@ -167,7 +171,7 @@ header{
 }
 
 input{
-    color:var(--errmes);
+    color:var(--color4);
 }
 
 
